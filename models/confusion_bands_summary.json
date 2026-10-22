@@ -1,0 +1,254 @@
+{
+  "band_definitions": {
+    "Low": "< 50 kcal (Light warmup/recovery)",
+    "Medium": "50 - 150 kcal (Moderate cardio)",
+    "High": "> 150 kcal (High intensity athletic effort)"
+  },
+  "actual_band_distribution": {
+    "Medium (50-150 kcal)": 1356,
+    "Low (<50 kcal)": 999,
+    "High (>150 kcal)": 645
+  },
+  "models": {
+    "Linear Regression": {
+      "confusion_matrix": [
+        [
+          933,
+          66,
+          0
+        ],
+        [
+          26,
+          1273,
+          57
+        ],
+        [
+          0,
+          25,
+          620
+        ]
+      ],
+      "band_labels": [
+        "Low (<50 kcal)",
+        "Medium (50-150 kcal)",
+        "High (>150 kcal)"
+      ],
+      "band_accuracy": 94.2,
+      "macro_precision": 94.07,
+      "macro_recall": 94.47,
+      "macro_f1": 94.23,
+      "per_class_metrics": {
+        "Low (<50 kcal)": {
+          "precision": 97.29,
+          "recall": 93.39,
+          "f1_score": 95.3,
+          "support": 999
+        },
+        "Medium (50-150 kcal)": {
+          "precision": 93.33,
+          "recall": 93.88,
+          "f1_score": 93.6,
+          "support": 1356
+        },
+        "High (>150 kcal)": {
+          "precision": 91.58,
+          "recall": 96.12,
+          "f1_score": 93.8,
+          "support": 645
+        }
+      }
+    },
+    "Decision Tree": {
+      "confusion_matrix": [
+        [
+          971,
+          28,
+          0
+        ],
+        [
+          19,
+          1304,
+          33
+        ],
+        [
+          0,
+          44,
+          601
+        ]
+      ],
+      "band_labels": [
+        "Low (<50 kcal)",
+        "Medium (50-150 kcal)",
+        "High (>150 kcal)"
+      ],
+      "band_accuracy": 95.87,
+      "macro_precision": 95.88,
+      "macro_recall": 95.51,
+      "macro_f1": 95.69,
+      "per_class_metrics": {
+        "Low (<50 kcal)": {
+          "precision": 98.08,
+          "recall": 97.2,
+          "f1_score": 97.64,
+          "support": 999
+        },
+        "Medium (50-150 kcal)": {
+          "precision": 94.77,
+          "recall": 96.17,
+          "f1_score": 95.46,
+          "support": 1356
+        },
+        "High (>150 kcal)": {
+          "precision": 94.79,
+          "recall": 93.18,
+          "f1_score": 93.98,
+          "support": 645
+        }
+      }
+    },
+    "Random Forest": {
+      "confusion_matrix": [
+        [
+          989,
+          10,
+          0
+        ],
+        [
+          17,
+          1326,
+          13
+        ],
+        [
+          0,
+          23,
+          622
+        ]
+      ],
+      "band_labels": [
+        "Low (<50 kcal)",
+        "Medium (50-150 kcal)",
+        "High (>150 kcal)"
+      ],
+      "band_accuracy": 97.9,
+      "macro_precision": 97.94,
+      "macro_recall": 97.74,
+      "macro_f1": 97.84,
+      "per_class_metrics": {
+        "Low (<50 kcal)": {
+          "precision": 98.31,
+          "recall": 99.0,
+          "f1_score": 98.65,
+          "support": 999
+        },
+        "Medium (50-150 kcal)": {
+          "precision": 97.57,
+          "recall": 97.79,
+          "f1_score": 97.68,
+          "support": 1356
+        },
+        "High (>150 kcal)": {
+          "precision": 97.95,
+          "recall": 96.43,
+          "f1_score": 97.19,
+          "support": 645
+        }
+      }
+    },
+    "KNN Regressor": {
+      "confusion_matrix": [
+        [
+          971,
+          28,
+          0
+        ],
+        [
+          23,
+          1313,
+          20
+        ],
+        [
+          0,
+          24,
+          621
+        ]
+      ],
+      "band_labels": [
+        "Low (<50 kcal)",
+        "Medium (50-150 kcal)",
+        "High (>150 kcal)"
+      ],
+      "band_accuracy": 96.83,
+      "macro_precision": 96.92,
+      "macro_recall": 96.77,
+      "macro_f1": 96.84,
+      "per_class_metrics": {
+        "Low (<50 kcal)": {
+          "precision": 97.69,
+          "recall": 97.2,
+          "f1_score": 97.44,
+          "support": 999
+        },
+        "Medium (50-150 kcal)": {
+          "precision": 96.19,
+          "recall": 96.83,
+          "f1_score": 96.51,
+          "support": 1356
+        },
+        "High (>150 kcal)": {
+          "precision": 96.88,
+          "recall": 96.28,
+          "f1_score": 96.58,
+          "support": 645
+        }
+      }
+    },
+    "XGBoost": {
+      "confusion_matrix": [
+        [
+          991,
+          8,
+          0
+        ],
+        [
+          11,
+          1330,
+          15
+        ],
+        [
+          0,
+          7,
+          638
+        ]
+      ],
+      "band_labels": [
+        "Low (<50 kcal)",
+        "Medium (50-150 kcal)",
+        "High (>150 kcal)"
+      ],
+      "band_accuracy": 98.63,
+      "macro_precision": 98.5,
+      "macro_recall": 98.73,
+      "macro_f1": 98.61,
+      "per_class_metrics": {
+        "Low (<50 kcal)": {
+          "precision": 98.9,
+          "recall": 99.2,
+          "f1_score": 99.05,
+          "support": 999
+        },
+        "Medium (50-150 kcal)": {
+          "precision": 98.88,
+          "recall": 98.08,
+          "f1_score": 98.48,
+          "support": 1356
+        },
+        "High (>150 kcal)": {
+          "precision": 97.7,
+          "recall": 98.91,
+          "f1_score": 98.31,
+          "support": 645
+        }
+      }
+    }
+  }
+}

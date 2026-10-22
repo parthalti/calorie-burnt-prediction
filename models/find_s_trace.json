@@ -1,0 +1,409 @@
+{
+  "feature_names": [
+    "Gender",
+    "Age_Group",
+    "Duration_Level",
+    "Heart_Rate_Level",
+    "Body_Temp_Level"
+  ],
+  "target_concept": "High Calorie Burn (>= 150 kcal)",
+  "most_specific_h0": [
+    "phi",
+    "phi",
+    "phi",
+    "phi",
+    "phi"
+  ],
+  "final_hypothesis": [
+    "?",
+    "?",
+    "Long_Duration",
+    "?",
+    "Elevated_Temp"
+  ],
+  "final_hypothesis_dict": {
+    "Gender": "?",
+    "Age_Group": "?",
+    "Duration_Level": "Long_Duration",
+    "Heart_Rate_Level": "?",
+    "Body_Temp_Level": "Elevated_Temp"
+  },
+  "trace": [
+    {
+      "step": 0,
+      "action": "Initialization",
+      "instance": null,
+      "target": null,
+      "hypothesis": [
+        "phi",
+        "phi",
+        "phi",
+        "phi",
+        "phi"
+      ],
+      "explanation": "Start with most specific hypothesis: h_0 = <phi, phi, phi, phi, phi>"
+    },
+    {
+      "step": 1,
+      "action": "Ignored (Negative Instance)",
+      "instance": {
+        "Gender": "Male",
+        "Age_Group": "Young",
+        "Duration_Level": "Short_Duration",
+        "Heart_Rate_Level": "High_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "No",
+      "hypothesis": [
+        "phi",
+        "phi",
+        "phi",
+        "phi",
+        "phi"
+      ],
+      "explanation": "Negative instance ignored by Find-S because inductive bias assumes consistent target concept."
+    },
+    {
+      "step": 2,
+      "action": "Ignored (Negative Instance)",
+      "instance": {
+        "Gender": "Male",
+        "Age_Group": "Young",
+        "Duration_Level": "Short_Duration",
+        "Heart_Rate_Level": "Moderate_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "No",
+      "hypothesis": [
+        "phi",
+        "phi",
+        "phi",
+        "phi",
+        "phi"
+      ],
+      "explanation": "Negative instance ignored by Find-S because inductive bias assumes consistent target concept."
+    },
+    {
+      "step": 3,
+      "action": "Ignored (Negative Instance)",
+      "instance": {
+        "Gender": "Female",
+        "Age_Group": "Young",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "High_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "No",
+      "hypothesis": [
+        "phi",
+        "phi",
+        "phi",
+        "phi",
+        "phi"
+      ],
+      "explanation": "Negative instance ignored by Find-S because inductive bias assumes consistent target concept."
+    },
+    {
+      "step": 4,
+      "action": "Ignored (Negative Instance)",
+      "instance": {
+        "Gender": "Female",
+        "Age_Group": "Middle_Aged",
+        "Duration_Level": "Short_Duration",
+        "Heart_Rate_Level": "Moderate_HR",
+        "Body_Temp_Level": "Normal_Temp"
+      },
+      "target": "No",
+      "hypothesis": [
+        "phi",
+        "phi",
+        "phi",
+        "phi",
+        "phi"
+      ],
+      "explanation": "Negative instance ignored by Find-S because inductive bias assumes consistent target concept."
+    },
+    {
+      "step": 5,
+      "action": "Generalize (Positive Instance)",
+      "instance": {
+        "Gender": "Male",
+        "Age_Group": "Middle_Aged",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "Moderate_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "Yes",
+      "hypothesis": [
+        "Male",
+        "Middle_Aged",
+        "Long_Duration",
+        "Moderate_HR",
+        "Elevated_Temp"
+      ],
+      "explanation": "First positive instance encountered. Set h_5 directly to instance values."
+    },
+    {
+      "step": 6,
+      "action": "Generalize (Positive Instance)",
+      "instance": {
+        "Gender": "Male",
+        "Age_Group": "Senior",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "High_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "Yes",
+      "hypothesis": [
+        "Male",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Generalizing attributes that mismatch the positive instance with '?'."
+    },
+    {
+      "step": 7,
+      "action": "Ignored (Negative Instance)",
+      "instance": {
+        "Gender": "Male",
+        "Age_Group": "Young",
+        "Duration_Level": "Short_Duration",
+        "Heart_Rate_Level": "Moderate_HR",
+        "Body_Temp_Level": "Normal_Temp"
+      },
+      "target": "No",
+      "hypothesis": [
+        "Male",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Negative instance ignored by Find-S because inductive bias assumes consistent target concept."
+    },
+    {
+      "step": 8,
+      "action": "Ignored (Negative Instance)",
+      "instance": {
+        "Gender": "Female",
+        "Age_Group": "Middle_Aged",
+        "Duration_Level": "Short_Duration",
+        "Heart_Rate_Level": "Moderate_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "No",
+      "hypothesis": [
+        "Male",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Negative instance ignored by Find-S because inductive bias assumes consistent target concept."
+    },
+    {
+      "step": 9,
+      "action": "Generalize (Positive Instance)",
+      "instance": {
+        "Gender": "Female",
+        "Age_Group": "Senior",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "Moderate_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "Yes",
+      "hypothesis": [
+        "?",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Generalizing attributes that mismatch the positive instance with '?'."
+    },
+    {
+      "step": 10,
+      "action": "Generalize (Positive Instance)",
+      "instance": {
+        "Gender": "Female",
+        "Age_Group": "Senior",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "High_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "Yes",
+      "hypothesis": [
+        "?",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Generalizing attributes that mismatch the positive instance with '?'."
+    },
+    {
+      "step": 11,
+      "action": "Generalize (Positive Instance)",
+      "instance": {
+        "Gender": "Female",
+        "Age_Group": "Middle_Aged",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "High_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "Yes",
+      "hypothesis": [
+        "?",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Generalizing attributes that mismatch the positive instance with '?'."
+    },
+    {
+      "step": 12,
+      "action": "Ignored (Negative Instance)",
+      "instance": {
+        "Gender": "Male",
+        "Age_Group": "Middle_Aged",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "Moderate_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "No",
+      "hypothesis": [
+        "?",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Negative instance ignored by Find-S because inductive bias assumes consistent target concept."
+    },
+    {
+      "step": 13,
+      "action": "Generalize (Positive Instance)",
+      "instance": {
+        "Gender": "Male",
+        "Age_Group": "Senior",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "High_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "Yes",
+      "hypothesis": [
+        "?",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Generalizing attributes that mismatch the positive instance with '?'."
+    },
+    {
+      "step": 14,
+      "action": "Generalize (Positive Instance)",
+      "instance": {
+        "Gender": "Female",
+        "Age_Group": "Young",
+        "Duration_Level": "Long_Duration",
+        "Heart_Rate_Level": "High_HR",
+        "Body_Temp_Level": "Elevated_Temp"
+      },
+      "target": "Yes",
+      "hypothesis": [
+        "?",
+        "?",
+        "Long_Duration",
+        "?",
+        "Elevated_Temp"
+      ],
+      "explanation": "Generalizing attributes that mismatch the positive instance with '?'."
+    }
+  ],
+  "sample_preview": [
+    {
+      "Gender": "Male",
+      "Age_Group": "Young",
+      "Duration_Level": "Short_Duration",
+      "Heart_Rate_Level": "High_HR",
+      "Body_Temp_Level": "Elevated_Temp",
+      "Target_Concept": "No"
+    },
+    {
+      "Gender": "Male",
+      "Age_Group": "Young",
+      "Duration_Level": "Short_Duration",
+      "Heart_Rate_Level": "Moderate_HR",
+      "Body_Temp_Level": "Elevated_Temp",
+      "Target_Concept": "No"
+    },
+    {
+      "Gender": "Female",
+      "Age_Group": "Young",
+      "Duration_Level": "Long_Duration",
+      "Heart_Rate_Level": "High_HR",
+      "Body_Temp_Level": "Elevated_Temp",
+      "Target_Concept": "No"
+    },
+    {
+      "Gender": "Female",
+      "Age_Group": "Middle_Aged",
+      "Duration_Level": "Short_Duration",
+      "Heart_Rate_Level": "Moderate_HR",
+      "Body_Temp_Level": "Normal_Temp",
+      "Target_Concept": "No"
+    },
+    {
+      "Gender": "Male",
+      "Age_Group": "Middle_Aged",
+      "Duration_Level": "Long_Duration",
+      "Heart_Rate_Level": "Moderate_HR",
+      "Body_Temp_Level": "Elevated_Temp",
+      "Target_Concept": "Yes"
+    },
+    {
+      "Gender": "Male",
+      "Age_Group": "Senior",
+      "Duration_Level": "Long_Duration",
+      "Heart_Rate_Level": "High_HR",
+      "Body_Temp_Level": "Elevated_Temp",
+      "Target_Concept": "Yes"
+    },
+    {
+      "Gender": "Male",
+      "Age_Group": "Young",
+      "Duration_Level": "Short_Duration",
+      "Heart_Rate_Level": "Moderate_HR",
+      "Body_Temp_Level": "Normal_Temp",
+      "Target_Concept": "No"
+    },
+    {
+      "Gender": "Female",
+      "Age_Group": "Middle_Aged",
+      "Duration_Level": "Short_Duration",
+      "Heart_Rate_Level": "Moderate_HR",
+      "Body_Temp_Level": "Elevated_Temp",
+      "Target_Concept": "No"
+    },
+    {
+      "Gender": "Female",
+      "Age_Group": "Senior",
+      "Duration_Level": "Long_Duration",
+      "Heart_Rate_Level": "Moderate_HR",
+      "Body_Temp_Level": "Elevated_Temp",
+      "Target_Concept": "Yes"
+    },
+    {
+      "Gender": "Female",
+      "Age_Group": "Senior",
+      "Duration_Level": "Long_Duration",
+      "Heart_Rate_Level": "High_HR",
+      "Body_Temp_Level": "Elevated_Temp",
+      "Target_Concept": "Yes"
+    }
+  ]
+}

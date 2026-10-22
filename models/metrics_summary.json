@@ -1,0 +1,240 @@
+{
+  "models": {
+    "Linear Regression": {
+      "MAE": 8.4415,
+      "RMSE": 11.4889,
+      "R2": 0.9673,
+      "CV_R2_Mean": 0.9671,
+      "CV_R2_Std": 0.0009,
+      "CV_MAE_Mean": 8.3099,
+      "CV_MAE_Std": 0.0735,
+      "CV_RMSE_Mean": 11.2701,
+      "CV_RMSE_Std": 0.1462,
+      "Coefficients_Raw": {
+        "Gender": 1.3742,
+        "Age": 0.5015,
+        "Height": -0.1697,
+        "Weight": 0.2863,
+        "Duration": 6.628,
+        "Heart_Rate": 1.9909,
+        "Body_Temp": -16.9425
+      },
+      "Intercept_Raw": 460.4885,
+      "Uses_Scaled_Features": true
+    },
+    "Decision Tree": {
+      "MAE": 4.5329,
+      "RMSE": 6.4882,
+      "R2": 0.9896,
+      "CV_R2_Mean": 0.9882,
+      "CV_R2_Std": 0.0003,
+      "CV_MAE_Mean": 4.6624,
+      "CV_MAE_Std": 0.0754,
+      "CV_RMSE_Mean": 6.7418,
+      "CV_RMSE_Std": 0.0968,
+      "Feature_Importances": {
+        "Gender": 0.0074,
+        "Age": 0.0242,
+        "Height": 0.0003,
+        "Weight": 0.0011,
+        "Duration": 0.919,
+        "Heart_Rate": 0.048,
+        "Body_Temp": 0.0
+      },
+      "Max_Depth": 9,
+      "Uses_Scaled_Features": false
+    },
+    "Random Forest": {
+      "MAE": 1.8568,
+      "RMSE": 2.8413,
+      "R2": 0.998,
+      "CV_R2_Mean": 0.9974,
+      "CV_R2_Std": 0.0002,
+      "CV_MAE_Mean": 1.985,
+      "CV_MAE_Std": 0.0223,
+      "CV_RMSE_Mean": 3.1522,
+      "CV_RMSE_Std": 0.1277,
+      "Feature_Importances": {
+        "Gender": 0.0067,
+        "Age": 0.0262,
+        "Height": 0.0011,
+        "Weight": 0.0028,
+        "Duration": 0.9145,
+        "Heart_Rate": 0.0483,
+        "Body_Temp": 0.0004
+      },
+      "N_Estimators": 100,
+      "Max_Depth": 12,
+      "Uses_Scaled_Features": false
+    },
+    "KNN Regressor": {
+      "MAE": 3.4256,
+      "RMSE": 4.685,
+      "R2": 0.9946,
+      "CV_R2_Mean": 0.9933,
+      "CV_R2_Std": 0.0004,
+      "CV_MAE_Mean": 3.6398,
+      "CV_MAE_Std": 0.0516,
+      "CV_RMSE_Mean": 5.0766,
+      "CV_RMSE_Std": 0.1365,
+      "Best_K": 11,
+      "Best_Weights": "distance",
+      "K_Candidates_Evaluated": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        15
+      ],
+      "Uses_Scaled_Features": true
+    },
+    "XGBoost": {
+      "MAE": 1.296,
+      "RMSE": 1.7848,
+      "R2": 0.9992,
+      "CV_R2_Mean": 0.999,
+      "CV_R2_Std": 0.0001,
+      "CV_MAE_Mean": 1.3906,
+      "CV_MAE_Std": 0.0377,
+      "CV_RMSE_Mean": 1.9543,
+      "CV_RMSE_Std": 0.072,
+      "Feature_Importances": {
+        "Gender": 0.013399999588727951,
+        "Age": 0.027899999171495438,
+        "Height": 0.0005000000237487257,
+        "Weight": 0.004999999888241291,
+        "Duration": 0.7702000141143799,
+        "Heart_Rate": 0.13369999825954437,
+        "Body_Temp": 0.049300000071525574
+      },
+      "N_Estimators": 150,
+      "Learning_Rate": 0.08,
+      "Max_Depth": 5,
+      "Uses_Scaled_Features": false
+    }
+  },
+  "cleaning_report": {
+    "missing_values": {
+      "User_ID": 0,
+      "Gender": 0,
+      "Age": 0,
+      "Height": 0,
+      "Weight": 0,
+      "Duration": 0,
+      "Heart_Rate": 0,
+      "Body_Temp": 0,
+      "Calories": 0
+    },
+    "duplicate_user_ids": 0,
+    "impossible_values": {
+      "negative_or_zero_duration": 0,
+      "abnormal_body_temp": 0,
+      "abnormal_heart_rate": 0,
+      "invalid_age": 0,
+      "invalid_height": 0,
+      "invalid_weight": 0,
+      "negative_calories": 0
+    },
+    "iqr_outliers": {
+      "Age": {
+        "Q1": 28.0,
+        "Q3": 56.0,
+        "IQR": 28.0,
+        "lower_bound": -14.0,
+        "upper_bound": 98.0,
+        "outlier_count": 0,
+        "outlier_percentage": 0.0
+      },
+      "Height": {
+        "Q1": 164.0,
+        "Q3": 185.0,
+        "IQR": 21.0,
+        "lower_bound": 132.5,
+        "upper_bound": 216.5,
+        "outlier_count": 14,
+        "outlier_percentage": 0.09
+      },
+      "Weight": {
+        "Q1": 63.0,
+        "Q3": 87.0,
+        "IQR": 24.0,
+        "lower_bound": 27.0,
+        "upper_bound": 123.0,
+        "outlier_count": 6,
+        "outlier_percentage": 0.04
+      },
+      "Duration": {
+        "Q1": 8.0,
+        "Q3": 23.0,
+        "IQR": 15.0,
+        "lower_bound": -14.5,
+        "upper_bound": 45.5,
+        "outlier_count": 0,
+        "outlier_percentage": 0.0
+      },
+      "Heart_Rate": {
+        "Q1": 88.0,
+        "Q3": 103.0,
+        "IQR": 15.0,
+        "lower_bound": 65.5,
+        "upper_bound": 125.5,
+        "outlier_count": 1,
+        "outlier_percentage": 0.01
+      },
+      "Body_Temp": {
+        "Q1": 39.6,
+        "Q3": 40.6,
+        "IQR": 1.0,
+        "lower_bound": 38.1,
+        "upper_bound": 42.1,
+        "outlier_count": 369,
+        "outlier_percentage": 2.46
+      },
+      "Calories": {
+        "Q1": 35.0,
+        "Q3": 138.0,
+        "IQR": 103.0,
+        "lower_bound": -119.5,
+        "upper_bound": 292.5,
+        "outlier_count": 4,
+        "outlier_percentage": 0.03
+      }
+    },
+    "cleaned_dataset_path": "/mnt/data/calorie_review/Calorie-Burnt-Prediction-main/data/cleaned_calories.csv",
+    "vif_scores": {
+      "Gender": 2.82,
+      "Age": 1.12,
+      "Height": 14.28,
+      "Weight": 18.65,
+      "Duration": 8.06,
+      "Heart_Rate": 3.67,
+      "Body_Temp": 5.43
+    }
+  },
+  "split_summary": {
+    "total_samples": 15000,
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "test_ratio": 0.2,
+    "features": [
+      "Gender",
+      "Age",
+      "Height",
+      "Weight",
+      "Duration",
+      "Heart_Rate",
+      "Body_Temp"
+    ],
+    "target": "Calories"
+  },
+  "feature_names": [
+    "Gender",
+    "Age",
+    "Height",
+    "Weight",
+    "Duration",
+    "Heart_Rate",
+    "Body_Temp"
+  ]
+}

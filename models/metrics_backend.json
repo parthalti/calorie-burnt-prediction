@@ -1,0 +1,68 @@
+{
+  "models": {
+    "Linear Regression": {
+      "MAE": 8.4415,
+      "RMSE": 11.4889,
+      "R2": 0.9673,
+      "CV_R2_Mean": 0.9671,
+      "CV_R2_Std": 0.0009
+    },
+    "Decision Tree": {
+      "MAE": 4.5329,
+      "RMSE": 6.4882,
+      "R2": 0.9896,
+      "CV_R2_Mean": 0.9882,
+      "CV_R2_Std": 0.0003
+    },
+    "Random Forest": {
+      "MAE": 1.8568,
+      "RMSE": 2.8413,
+      "R2": 0.998,
+      "CV_R2_Mean": 0.9974,
+      "CV_R2_Std": 0.0002
+    },
+    "KNN Regressor": {
+      "MAE": 3.4256,
+      "RMSE": 4.685,
+      "R2": 0.9946,
+      "CV_R2_Mean": 0.9933,
+      "CV_R2_Std": 0.0004
+    }
+  },
+  "vif": {
+    "Gender": 2.82,
+    "Age": 1.12,
+    "Height": 14.28,
+    "Weight": 18.65,
+    "Duration": 8.06,
+    "Heart_Rate": 3.67,
+    "Body_Temp": 5.43
+  },
+  "pca_variance": [
+    0.9013,
+    0.0621
+  ],
+  "cluster_stats": {
+    "Light Warmup / Low Intensity": {
+      "Count": 4213,
+      "Percentage": 28.09,
+      "Avg_Duration": 5.3,
+      "Avg_HR": 84.7,
+      "Avg_Calories": 20.6
+    },
+    "Moderate Cardio / Endurance": {
+      "Count": 5712,
+      "Percentage": 38.08,
+      "Avg_Duration": 14.8,
+      "Avg_HR": 94.5,
+      "Avg_Calories": 74.8
+    },
+    "High Intensity / Peak Effort": {
+      "Count": 5075,
+      "Percentage": 33.83,
+      "Avg_Duration": 24.9,
+      "Avg_HR": 105.6,
+      "Avg_Calories": 163.4
+    }
+  }
+}
