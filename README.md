@@ -14,7 +14,7 @@ An end-to-end Machine Learning system that predicts exercise energy expenditure 
 The interactive web application is deployed and accessible online:
 
 
-
+https://calorie-burnt-prediction-parthalti.streamlit.app
 
 ---
 
